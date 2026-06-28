@@ -39,8 +39,8 @@
 		</p>
 
 		<div class="grid">
-			{#each links as link}
-				<a class="card" href={link.url}>
+			{#each links as link, i}
+				<a class="card" href={link.url} style={`animation-delay: ${i * 0.25}s`}>
 					<h2>{link.title}</h2>
 					<p>{link.description}</p>
 				</a>
@@ -78,6 +78,7 @@
 		align-items: center;
 		padding: 4rem 2rem;
 		text-align: center;
+		animation: fadeIn 0.25s ease-out;
 	}
 
 	h1 {
@@ -97,6 +98,7 @@
 		font-size: 1.2rem;
 		color: #a1a1aa;
 		line-height: 1.7;
+		animation: fadeIn 0.25s ease-out;
 	}
 
 	.grid {
@@ -105,9 +107,11 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 		gap: 1.25rem;
+		animation: fadeIn 0.5s ease-out forwards;
 	}
 
 	.card {
+		opacity: 0;
 		text-align: left;
 		text-decoration: none;
 		padding: 1.5rem;
@@ -118,6 +122,7 @@
 			border-color .2s,
 			transform .2s,
 			background .2s;
+		animation: fadeInCard 0.5s ease-out forwards;	
 	}
 
 	.card:hover {
@@ -143,5 +148,28 @@
 		text-align: center;
 		font-size: 0.9rem;
 		color: #52525b;
+	}
+
+	@keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(12px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+		
+	/* was yoinked too */
+	@keyframes fadeInCard {
+		from {
+			opacity: 0;
+			transform: translateY(12px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}
 </style>

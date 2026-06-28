@@ -61,6 +61,7 @@
 		justify-content: center;
 		text-align: center;
 		padding: 2rem;
+		animation: fadeIn 0.25s ease-out;
 	}
 
 	h1 {
@@ -81,6 +82,7 @@
 		font-size: 1.25rem;
 		line-height: 1.7;
 		color: #d4d4d8;
+		animation: fadeIn 0.5s ease-out;
 	}
 
 	footer {
@@ -98,6 +100,7 @@
         border: 1px solid #27272a;
         border-radius: 14px;
         background: #0d0d10;
+		animation: fadeIn 0.75s ease-out;
     }
 
     .construction h2 {
@@ -114,4 +117,15 @@
         line-height: 1.7;
         font-size: 1rem;
     }
+
+	@keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(12px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }	
 </style>

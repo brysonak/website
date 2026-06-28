@@ -44,7 +44,7 @@
 		font-family:
 			Inter,
 			system-ui,
-			sans-serif;
+			sans-serif;	
 	}
 
 	.page {
@@ -63,6 +63,11 @@
 		justify-content: center;
 		text-align: center;
 		padding: 5rem;
+		animation: fadeIn 0.5s ease-out;
+	}
+	
+	.accent {
+		color: #38bdf8;
 	}
 
 	h1 {
@@ -79,12 +84,14 @@
 		font-size: 1.35rem;
 		line-height: 1.7;
 		color: #a1a1aa;
+		animation: fadeIn 0.5s ease-out;
 	}
 
 	.buttons {
 		display: flex;
 		gap: 1rem;
 		margin-top: 3.5rem;
+		animation: fadeIn 1s ease-out;
 	}
 
 	.primary,
@@ -121,4 +128,16 @@
 		font-size: .9rem;
 		color: #71717a;
 	}
+
+	/* yoinked straight out of https://spatulari.com */
+	@keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(12px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 </style>
