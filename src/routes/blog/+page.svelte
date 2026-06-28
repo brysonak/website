@@ -24,8 +24,8 @@
 			<h2>Blog Under Construction</h2>
 
 			<p>
-				The downloads page is currently under construction.
-				Prebuilt binaries and installation instructions will be available soon.
+				The azin blog is currently under construction.
+				News and updates will be available soon.
 			</p>
 		</div>
 	</main>
