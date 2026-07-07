@@ -16,14 +16,19 @@
 			url: 'https://docs.azin-lang.org'
 		},
 		{
+			title: 'Internal Documentation',
+			description: 'Internal docs made with Doxygen.',
+			url: 'https://internals.azin-lang.org'
+		},
+		{
 			title: 'GitHub',
 			description: 'Source code, issues, and development progress.',
-			url: 'https://github.com/azin-lang/azin'
+			url: '/github'
 		},
 		{
 			title: 'Discord',
 			description: 'The official Azin Discord server',
-			url: 'https://discord.gg/HVhCevjAxR'
+			url: '/discord'
 		},
 		{
 			title: 'Founders',
