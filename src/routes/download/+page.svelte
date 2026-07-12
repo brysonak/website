@@ -1,8 +1,8 @@
 <svelte:head>
-	<title>Azin</title>
+	<title>Downloads • Azin</title>
 	<meta
 		name="description"
-		content="A modern systems programming language. (In Development)"
+		content="Download the latest releases of the Azin programming language."
 	/>
 </svelte:head>
 
@@ -11,25 +11,79 @@
 </script>
 
 <div class="page">
-
 	<main class="hero">
-		<h1>
-			<span class="accent">A</span>zin
-		</h1>
+		<h1>Downloads</h1>
 
 		<p class="description">
-			A modern systems programming language currently in development.
+			Get the latest release of the Azin programming language. Every release has
+			its own page containing downloads, installation instructions and a full
+			changelog.
 		</p>
 
-		<div class="construction">
-			<h2>Downloads Under Construction</h2>
-
-			<p>
-				The downloads page is currently under construction.
-				Prebuilt binaries and installation instructions will be available soon.
-			</p>
+		<div class="buttons">
+			<a href="/download/0.1.0" class="primary">Download Azin 0.1.0</a>
+			<a href="/download/latest" class="secondary">Latest Release →</a>
 		</div>
 	</main>
+
+	<div class="divider"></div>
+
+	<section class="section">
+		<h2>Latest Release</h2>
+
+		<div class="release latest">
+			<div>
+				<h3>Azin 0.1.0</h3>
+				<p>
+					The first public preview of Azin, featuring the compiler, semantic
+					analysis, type inference, C interoperability and native C code generation.
+					C can then compile to any target.
+				</p>
+
+				<span>Released July 12, 2026</span>
+			</div>
+
+			<a href="/download/0.1.0" class="primary">View Release</a>
+		</div>
+	</section>
+
+	<section class="section">
+		<h2>Supported Platforms</h2>
+
+		<div class="grid">
+			<div class="card">
+				<div class="icon">🪟</div>
+				<h3>Windows</h3>
+				<p>Officially supported.</p>
+			</div>
+
+			<div class="card">
+				<div class="icon">🐧</div>
+				<h3>Linux</h3>
+				<p>Officially supported.</p>
+			</div>
+
+			<div class="card">
+				<div class="icon">🍎</div>
+				<h3>macOS</h3>
+				<p>Officially supported.</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="section">
+		<h2>Release History</h2>
+
+		<a class="release" href="/download/0.1.0">
+			<div>
+				<h3>0.1.0</h3>
+				<p>First public preview release.</p>
+				<span>July 12, 2026</span>
+			</div>
+
+			<strong>View →</strong>
+		</a>
+	</section>
 
 	<footer>
 		© {year} Azin Language Project
@@ -37,96 +91,168 @@
 </div>
 
 <style>
-	:global(body) {
-		margin: 0;
-		background: #09090b;
-		font-family:
-			Inter,
-			system-ui,
-			sans-serif;
+:global(body){
+	margin:0;
+	background:#09090b;
+	font-family:Inter,system-ui,sans-serif;
+}
+
+.page{
+	min-height:100vh;
+	background:#09090b;
+	color:white;
+	display:flex;
+	flex-direction:column;
+}
+
+.hero{
+	min-height:60svh;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	text-align:center;
+	padding:4rem 2rem;
+	animation:fadeIn .5s ease-out;
+}
+
+h1{
+	margin:0;
+	font-size:clamp(4rem,9vw,6rem);
+	font-weight:900;
+	letter-spacing:-.05em;
+}
+
+.description{
+	max-width:760px;
+	margin-top:1.5rem;
+	font-size:1.2rem;
+	line-height:1.8;
+	color:#a1a1aa;
+}
+
+.buttons{
+	display:flex;
+	gap:1rem;
+	margin-top:3rem;
+	flex-wrap:wrap;
+}
+
+.primary,.secondary{
+	padding:1rem 2rem;
+	border-radius:10px;
+	text-decoration:none;
+	font-weight:600;
+	transition:.2s;
+}
+
+.primary{
+	background:#0ea5e9;
+	color:white;
+}
+
+.primary:hover{
+	background:#38bdf8;
+}
+
+.secondary{
+	border:1px solid #27272a;
+	color:#d4d4d8;
+}
+
+.secondary:hover{
+	border-color:#38bdf8;
+	color:white;
+}
+
+.divider{
+	height:1px;
+	background:linear-gradient(90deg,transparent,#27272a,transparent);
+	max-width:1100px;
+	width:100%;
+	margin:auto;
+}
+
+.section{
+	max-width:1000px;
+	width:100%;
+	margin:auto;
+	padding:4rem 2rem;
+	box-sizing:border-box;
+}
+
+.section h2{
+	margin:0 0 2rem;
+	font-size:2rem;
+}
+
+.grid{
+	display:grid;
+	grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+	gap:1.5rem;
+}
+
+.card,.release{
+	border:1px solid #27272a;
+	background:#0d0d10;
+	border-radius:14px;
+	padding:1.5rem;
+	transition:.2s;
+}
+
+.card:hover,.release:hover{
+	border-color:#38bdf8;
+	transform:translateY(-2px);
+}
+
+.release{
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	text-decoration:none;
+	color:white;
+	gap:2rem;
+}
+
+.release h3,.card h3{
+	margin:0;
+}
+
+.release p,.card p{
+	color:#a1a1aa;
+	line-height:1.6;
+	margin:.75rem 0;
+}
+
+.release span{
+	color:#71717a;
+	font-size:.9rem;
+}
+
+.latest{
+	margin-top:.5rem;
+}
+
+.icon{
+	font-size:2rem;
+	margin-bottom:.5rem;
+}
+
+footer{
+	padding:2rem;
+	text-align:center;
+	color:#71717a;
+	font-size:.9rem;
+}
+
+@keyframes fadeIn{
+	from{
+		opacity:0;
+		transform:translateY(12px);
 	}
-
-	.page {
-		min-height: 100vh;
-		display: flex;
-		flex-direction: column;
-		background: #09090b;
-		color: white;
+	to{
+		opacity:1;
+		transform:translateY(0);
 	}
-
-	.hero {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		text-align: center;
-		padding: 2rem;
-		animation: fadeIn 0.25s ease-out;
-	}
-
-	h1 {
-		margin: 0;
-		font-size: clamp(4.5rem, 10vw, 7rem);
-		font-weight: 900;
-		letter-spacing: -0.05em;
-		line-height: 1;
-	}
-
-	.accent {
-		color: #38bdf8;
-	}
-
-	.description {
-		margin-top: 2rem;
-		max-width: 600px;
-		font-size: 1.25rem;
-		line-height: 1.7;
-		color: #d4d4d8;
-		animation: fadeIn 0.5s ease-out;
-	}
-
-	footer {
-		padding: 2rem;
-		text-align: center;
-		font-size: 0.9rem;
-		color: #52525b;
-	}
-
-    .construction {
-        margin-top: 3.5rem;
-        max-width: 640px;
-        width: 100%;
-        padding: 2rem;
-        border: 1px solid #27272a;
-        border-radius: 14px;
-        background: #0d0d10;
-		animation: fadeIn 0.75s ease-out;
-    }
-
-    .construction h2 {
-        margin: 0;
-        font-size: 1.4rem;
-        font-weight: 700;
-        letter-spacing: -0.02em;
-        color: white;
-    }
-
-    .construction p {
-        margin: 1rem 0 0;
-        color: #a1a1aa;
-        line-height: 1.7;
-        font-size: 1rem;
-    }
-
-	@keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(12px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
+}
 </style>
